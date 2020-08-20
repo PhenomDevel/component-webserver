@@ -1,7 +1,7 @@
 # Usage
 ## Quick and dirty
 ```clj
-(require '[de.phenomdevel.components.server :as server])
+(require '[de.phenomdevel.components.webserver :as webserver])
 (require '[com.stuartsierra.component :as c])
 
 (def ^:private !server
@@ -16,7 +16,7 @@
   {:port 1212
    :handler app-handler})
 
-(reset! !server (server/new-server config))
+(reset! !server (webserver/new-webserver config))
 
 (swap! !server c/start) ;; => This will start the server
 
@@ -32,7 +32,7 @@ normally be used.
 This is a really basic example just to show how it should be done.
 
 ```clj
-(require '[de.phenomdevel.components.server :as server])
+(require '[de.phenomdevel.components.webserver :as webserver])
 (require '[com.stuartsierra.component :as c])
 
 ;; Could also come from a file or something
@@ -49,8 +49,9 @@ This is a really basic example just to show how it should be done.
 (def !system
   (atom
    (c/system-map
-    :server
-    (server/new-server handler (:server config)))))
+     :server
+     (webserver/new-webserver (merge (:server config)
+                                     {:handler app-handler})))))
 
 (swap! !system c/start)
 ;; This will start your system with the webserver
