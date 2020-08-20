@@ -10,38 +10,9 @@ To install, add the following to your project `:dependencies`:
 [de.phenomdevel/component-webserver "1.0.0"]
 ```
 
-## Quick and dirty
-```clj
-(require '[de.phenomdevel.components.webserver :as webserver])
-(require '[com.stuartsierra.component :as c])
-
-(def ^:private !server
-  (atom nil))
-
-(defn- app-handler
-  [request]
-  {:status 200
-   :body "Hello World"})
-
-(def ^:private config
-  {:port 1212
-   :handler app-handler})
-
-(reset! !server (webserver/new-webserver config))
-
-(swap! !server c/start) ;; => This will start the server
-
-;; If you want to stop the server again do the following command
-
-(swap! !server c/stop)
-
-```
-
-## Use within com.stuartsierra.component system
-This method is pretty much the same as above but the a whole component system which will
-normally be used.
-This is a really basic example just to show how it should be done.
-
+## Usage
+The code below shows an lightweight example of how you could use this component within your
+[`com.stuartsierra/component`](https://github.com/stuartsierra/component) system.
 ```clj
 (require '[de.phenomdevel.components.webserver :as webserver])
 (require '[com.stuartsierra.component :as c])
