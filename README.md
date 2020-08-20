@@ -5,7 +5,7 @@ can be provided with a handler. The handler then will handle all incoming reques
 # Installation
 To install, add the following to your project `:dependencies`:
 ```
-[de.phenomdevel/component-webserver "1.0.0"]
+[de.phenomdevel/component-webserver "1.0.1"]
 ```
 
 ## Usage
