@@ -27,7 +27,8 @@
   (stop [this]
     (log/info "[Webserver] Stopped webserver.")
     (when server-handle
-      (server-handle :timeout 100))))
+      (server-handle :timeout 100))
+    (assoc this :server-handle nil)))
 
 
 ;; =============================================================================
