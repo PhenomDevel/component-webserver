@@ -3,8 +3,6 @@ This library provides an easy to use [`com.stuartsierra/component`](https://gith
 can be provided with a handler. The handler then will handle all incoming requests.
 
 # Installation
-NOTE: This will be the steps once the project is on clojars. It is not currently on there!
-
 To install, add the following to your project `:dependencies`:
 ```
 [de.phenomdevel/component-webserver "1.0.0"]
