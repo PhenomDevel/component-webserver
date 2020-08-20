@@ -1,5 +1,5 @@
 # component-webserver
-This library provides an easy to use [`com.stuartsierra/component`](https://github.com/stuartsierra/component) component to start up a [http-kit](https://github.com/http-kit/http-kit webserver which
+This library provides an easy to use [`com.stuartsierra/component`](https://github.com/stuartsierra/component) component to start up a [`http-kit`](https://github.com/http-kit/http-kit) webserver which
 can be provided with a handler. The handler then will handle all incoming requests.
 
 # Installation
