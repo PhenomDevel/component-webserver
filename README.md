@@ -1,4 +1,15 @@
-# Usage
+# component-webserver
+This library provides an easy to use com.stuartsierra/components component to start up a webserver which
+can be provided with a handler. The handler then will handle all incoming requests.
+
+# Installation
+NOTE: This will be the steps once the project is on clojars. It is not currently on there!
+
+To install, add the following to your project `:dependencies`:
+```
+[de.phenomdevel/component-webserver "1.0.0"]
+```
+
 ## Quick and dirty
 ```clj
 (require '[de.phenomdevel.components.webserver :as webserver])
@@ -57,3 +68,8 @@ This is a really basic example just to show how it should be done.
 ;; This will start your system with the webserver
 
 ```
+
+# License
+Copyright © 2020 Kevin Kaiser
+
+Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
