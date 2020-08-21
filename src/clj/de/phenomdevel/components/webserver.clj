@@ -35,6 +35,12 @@
 ;; Public API
 
 (defn new-webserver
+  "Takes `config` and returns a new
+   webserver component (com.stuartsierra/component).
+
+  Config can contain
+  - :port -> port the webserver should listen on (int)
+  - :max-body -> maximum webserver body size (int)"
   [config]
   {:pre [(s/valid? ::specs/config config)]}
   (map->Webserver config))
