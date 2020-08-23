@@ -26,7 +26,7 @@ The code below shows an lightweight example of how you could use this component 
 
 ;; This might also be a compojure handler
 (defn- handler-factory
-  [context]
+  [context] ;; Holds all dependencies of `webserver` e.g. if you provide a db-pool component
   (fn [request]
    {:status 200
     :body "Hello World"}))
@@ -36,7 +36,7 @@ The code below shows an lightweight example of how you could use this component 
    (c/system-map
      :server
      (webserver/new-webserver
-	   (assoc (:server config) :handler-factory handler-factory})))))
+       (assoc (:server config) :handler-factory handler-factory})))))
 
 (swap! !system c/start)
 ;; This will start your system with the webserver
