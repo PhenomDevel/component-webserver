@@ -1,5 +1,5 @@
-[![Clojars Project](https://img.shields.io/clojars/v/component-webserver.svg)](https://clojars.org/component-webserver)
-[![cljdoc badge](https://cljdoc.org/badge/component-webserver/component-webserver)](https://cljdoc.org/d/component-webserver/component-webserver/CURRENT)
+[![Clojars Project](https://img.shields.io/clojars/v/de.phenomdevel/component-webserver.svg)](https://clojars.org/de.phenomdevel/component-webserver)
+[![cljdoc badge](https://cljdoc.org/badge/de.phenomdevel/component-webserver)](https://cljdoc.org/d/component-webserver/component-webserver/CURRENT)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/PhenomDevel/component-webserver/blob/master/LICENSE)
 
 # component-webserver
