@@ -25,17 +25,18 @@ The code below shows an lightweight example of how you could use this component 
    {:port 1212}})
 
 ;; This might also be a compojure handler
-(defn- app-handler
-  [request]
-  {:status 200
-   :body "Hello World"})
+(defn- handler-factory
+  [context]
+  (fn [request]
+   {:status 200
+    :body "Hello World"}))
 
 (def !system
   (atom
    (c/system-map
      :server
-     (webserver/new-webserver (merge (:server config)
-                                     {:handler app-handler})))))
+     (webserver/new-webserver
+	   (assoc (:server config) :handler-factory handler-factory})))))
 
 (swap! !system c/start)
 ;; This will start your system with the webserver
