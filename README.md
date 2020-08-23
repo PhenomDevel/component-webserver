@@ -35,8 +35,7 @@ The code below shows an lightweight example of how you could use this component 
   (atom
    (c/system-map
      :server
-     (webserver/new-assoc
-       (webserver (:server config) :handler-factory handler-factory})))))
+     (webserver/new-webserver (assoc (:server config) :handler-factory handler-factory}))))
 
 (swap! !system c/start)
 ;; This will start your system with the webserver
