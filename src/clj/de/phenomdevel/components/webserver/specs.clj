@@ -8,8 +8,8 @@
 
 (s/def ::port int?)
 (s/def ::max-body int?)
-(s/def ::handler ifn?)
+(s/def ::handler-factory ifn?)
 (s/def ::config
   (s/keys
-   :req-un [::port ::handler]
+   :req-un [::port ::handler-factory]
    :opt-un [::max-body]))
