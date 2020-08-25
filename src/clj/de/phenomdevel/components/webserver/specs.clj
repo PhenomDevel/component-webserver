@@ -11,5 +11,5 @@
 (s/def ::handler-factory ifn?)
 (s/def ::config
   (s/keys
-   :req-un [::port ::handler-factory]
+   :req-un [::port]
    :opt-un [::max-body]))
